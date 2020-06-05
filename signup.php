@@ -17,6 +17,10 @@
 
         if (empty($errors)) {
             # all is good
+            $user = R::dispense('users');
+            $user->login = $data['login'];
+            $user->password = $data['password'];
+            R::store($user);
         } else {
             echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
         }
