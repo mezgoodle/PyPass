@@ -3,7 +3,8 @@ require 'db.php';
 ?>
 
 <?php if (isset($_SESSION['logged_user'])) : ?>
-    logged!
+    logged!<br>
+    Hello, <?php echo $_SESSION['logged_user']->login; ?>
     <hr>
     <a href="/logout.php">Logout</a>
 <?php else : ?>
