@@ -19,8 +19,9 @@
             # all is good
             $user = R::dispense('users');
             $user->login = $data['login'];
-            $user->password = $data['password'];
+            $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
             R::store($user);
+            echo '<div style="color: green;">You successfully registered!</div><hr>';
         } else {
             echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
         }
