@@ -24,7 +24,7 @@
             $user->login = $data['login'];
             $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
             R::store($user);
-            echo '<div style="color: green;">You successfully registered!</div><hr>';
+            echo '<div style="color: green;">You successfully are registered!</div><hr>';
         } else {
             echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
         }

@@ -9,7 +9,8 @@
             # user find
             if (password_verify($data['password'], $user->password)) {
                 # login
-                echo 'test';
+                 $_SESSION['logged_user'] = $user->login;
+                 echo '<div style="color: green;">You are successfully logged in!</div><hr>';
             } else {
                 $errors[] = 'Password is incorrect';
             }
