@@ -14,6 +14,9 @@
         if ($data['password_2'] != $data['password']) {
             $errors[] = 'Second password is not match!';
         }
+        if (R::count('users', "login = ?", array($data['login'])) > 0) {
+            $errors[] = 'User with this name has already registered';
+        }
 
         if (empty($errors)) {
             # all is good
