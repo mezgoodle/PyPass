@@ -17,3 +17,4 @@
  <?php } ?>
 </table>
 <?php } else { header('Location: /login.php'); } ?>
+<script src="./libs/search.js"></script>
