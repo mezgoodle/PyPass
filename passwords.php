@@ -1,5 +1,7 @@
 <?php 
-    if (isset($_SESSION['logged_user'])) { ?>
+    $names = array("Alfreds Futterkiste", "Berglunds snabbkop", "Island Trading", "Koniglich Essen");
+    $countries = array("Germany", "Sweden", "UK", "Germany");
+    if (!isset($_SESSION['logged_user'])) { ?>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
 <table id="myTable">
@@ -7,21 +9,11 @@
     <th style="width:60%;">Name</th>
     <th style="width:40%;">Country</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbkop</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Koniglich Essen</td>
-    <td>Germany</td>
-  </tr>
+  <?php for ($i=0; $i < count($names); $i++) { ?>
+    <tr>
+      <td><?php echo $names[$i]; ?></td>
+      <td><?php echo $countries[$i]; ?></td>
+    </tr>
+ <?php } ?>
 </table>
 <?php } else { header('Location: /login.php'); } ?>
