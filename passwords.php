@@ -30,7 +30,7 @@
 <?php require_once './templates/header.php'; ?>
 <div class="container-fluid">
     <input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Search for passwords by name">
-    <table class="table" id="myTable">
+    <table class="table table-striped" id="myTable">
     <thead>
         <tr>
         <th scope="col">#</th>
