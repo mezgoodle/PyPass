@@ -5,7 +5,7 @@ require_once './templates/header.php';
 
 <?php if (isset($_SESSION['logged_user'])) : ?>
 <div class="text-center">
-    <h2 class="text-center">Hello, <?php echo $_SESSION['logged_user']->login; ?></h2>
+    <h2 class="text-center">Hello, <?php echo $_SESSION['logged_user']->login; ?>!</h2>
     <hr>
     <a class="btn btn-primary btn-lg" href="/logout.php" role="button">Logout</a>
 </div>
