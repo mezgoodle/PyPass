@@ -59,7 +59,6 @@
     </p>
     <p><button type="submit" name="do_save">Save</button></p>
 </form>
-<?php require_once 'generator.html';?>
 </body>
 </html>
 <?php } else { header('Location: /login.php'); } ?>
