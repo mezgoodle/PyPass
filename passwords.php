@@ -59,6 +59,7 @@
     </p>
     <p><button type="submit" name="do_save">Save</button></p>
 </form>
+<a class="btn btn-primary btn-lg" href="/generator.html" target="_blank" role="button">Password generator</a>
 </body>
 </html>
 <?php } else { header('Location: /login.php'); } ?>

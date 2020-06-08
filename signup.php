@@ -24,25 +24,28 @@
             $user->login = $data['login'];
             $user->password = password_hash($data['password'], PASSWORD_DEFAULT);
             R::store($user);
-            echo '<div style="color: green;">You successfully are registered!</div><hr>';
+            echo '<div style="color: green;">You successfully are registered!</div>';
         } else {
-            echo '<div style="color: red;">'.array_shift($errors).'</div><hr>';
+            echo '<div style="color: red;">'.array_shift($errors).'</div>';
         }
     }
 ?>
-
-<form action="/signup.php" method="post">
-    <p>
-        <label for="username">Your name</label>
-        <input type="text" name="login" id="username" value="<?php echo @$data['login']; ?>">
-    </p>
-    <p>
-        <label for="password">Your password</label>
-        <input type="password" name="password" id="password" value="<?php echo @$data['password']; ?>">
-    </p>
-    <p>
-        <label for="password_2">Your password again</label>
-        <input type="password" name="password_2" id="password_2" value="<?php echo @$data['password_2']; ?>">
-    </p>
-    <p><button type="submit" name="do_signup">Sign up</button></p>
-</form>
+<?php require_once './templates/header.php'; ?>
+<div class="container">
+    <form action="/signup.php" method="post">
+        <div class="form-group">
+            <label for="username">Your name</label>
+            <input type="text" class="form-control" id="username" name="login" value="<?php echo @$data['login']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="password">Your password</label>
+            <input type="password" class="form-control" id="password" name="password" value="<?php echo @$data['password']; ?>">
+        </div>
+        <div class="form-group">
+            <label for="password_2">Your password again</label>
+            <input type="password" class="form-control" id="password_2" name="password_2" value="<?php echo @$data['password_2']; ?>">
+        </div>
+        <button type="submit" name="do_signup" class="btn btn-primary">Sign up</button>
+    </form>
+</div>  
+<?php require_once './templates/footer.php'; ?>
