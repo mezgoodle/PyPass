@@ -8,11 +8,11 @@
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal">PyPass</h5>
+  <a href="/"  class="my-0 mr-md-auto font-weight-normal"><h5>PyPass</h5></a>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="/signup.php">Sign Up</a>
     <a class="p-2 text-dark" href="/login.php">Login</a>
     <a class="p-2 text-dark" href="/passwords.php">Passwords</a>
   </nav>
-  <a class="btn btn-outline-primary" href="/generator.html">Password generator</a>
+  <a class="btn btn-outline-primary" target="_blank" href="/generator.html">Password generator</a>
 </div>

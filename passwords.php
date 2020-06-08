@@ -65,7 +65,7 @@
     </form>
 </div>
 <div class="container text-center">
-<a class="btn btn-secondary" href="/generator.html" target="_blank" role="button">Password generator</a>
+    <a class="btn btn-secondary" href="/generator.html" target="_blank" role="button">Password generator</a>
 </div>
 <script src="./libs/search.js"></script>
 <?php require_once './templates/footer.php'; ?>
