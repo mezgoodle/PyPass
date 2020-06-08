@@ -1,5 +1,6 @@
 <?php
 require 'db.php';
+require_once './templates/header.php';
 ?>
 
 <?php if (isset($_SESSION['logged_user'])) : ?>
@@ -10,4 +11,7 @@ require 'db.php';
 <?php else : ?>
     <a href="/login.php">Login</a><br>
     <a href="/signup.php">Sign up</a>
-<?php endif; ?>
+<?php 
+    endif; 
+    require_once './templates/footer.php';
+?>
