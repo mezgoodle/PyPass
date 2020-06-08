@@ -1,6 +1,6 @@
 <?php
-require 'db.php';
-require_once './templates/header.php';
+    require 'db.php';
+    require_once './templates/header.php';
 ?>
 
 <?php if (isset($_SESSION['logged_user'])) : ?>
