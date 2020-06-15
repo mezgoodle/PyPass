@@ -4,7 +4,7 @@
 
 Hi! This is my project - `PyPass`. Once upon a time I wanted to make my own **password storage service**. Of course, I do not call it a *full-fledged project*. But here you can see the work with [RedBeanPHP](https://www.redbeanphp.com/index.php).
 
-> I did not teach the project for hosting.
+> I did not send the project to server.
 
 ## Credits
 
